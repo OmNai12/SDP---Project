@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Translator and OCR Reader</title>
 
     <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -26,8 +26,7 @@
             </div>
             <center>
                 <form name="inputText" action="" method="post">
-                    <!-- <input type="text" class="ipBox" name="textInput"> -->
-                    <textarea type="text" class="ipBox" name="textInput"></textarea>
+                    <textarea type="text" class="ipBox" name="textInput" id="inputBoxForText"></textarea>
             </center>
         </div>
         <div class="button-space">
@@ -47,6 +46,12 @@
             </div>
         </div>
     </div>
+    <div class="voice-functionalities">
+        <button class="voice-functionalities-buttons" onclick="speak()" id="speech_to_text_button">Click to
+            speak</button>
+        <button class="voice-functionalities-buttons" id="text_to_voice_button">Click to listen</button>
+    </div>
+
 
 </body>
 <script>
@@ -61,6 +66,16 @@
             target.innerHTML = 'English';
         }
     }
+
+    function speak() {
+        let speechReck = new webkitSpeechRecognition();
+        speechReck.lang = "en-GB";
+        speechReck.onresult = function (event) {
+            document.getElementById("inputBoxForText").value = event.results[0][0].transcript;
+        }
+        speechReck.start();
+    }
+
 </script>
 
 </html>

@@ -73,3 +73,30 @@
     border-radius: 20px;
     overflow: auto;
 }
+
+.voice-functionalities {
+    margin-left: 27px;
+    margin-right: 27px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 5px solid blue; */
+}
+
+.voice-functionalities-buttons {
+    border: none;
+    border-radius: 25px;
+    background-color: black;
+    color: whitesmoke;
+    height: 40px;
+    width: 425px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.voice-functionalities-buttons:hover {
+    background-color: rgb(1, 25, 83);
+}
+
+textarea {
+    resize: none;
+}
