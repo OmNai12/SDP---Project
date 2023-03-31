@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="breadcrumb-title">
+        <h1>Translator</h1>
+    </div>
+
+    <div class="container">
+        <div class="left-side">
+            <div class="language" onchange="changeLanguage()">
+                <select class="select-language" id="chooseLanguage">
+                    <option value="en">English</option>
+                    <option value="gu">Gujarati</option>
+                </select>
+            </div>
+            <center>
+                <form name="inputText" action="" method="post">
+                    <!-- <input type="text" class="ipBox" name="textInput"> -->
+                    <textarea type="text" class="ipBox" name="textInput"></textarea>
+            </center>
+        </div>
+        <div class="button-space">
+            <center>
+                <input type="submit" class="transButton" value="Translate">
+            </center>
+            </form>
+        </div>
+        <div class="right-side">
+            <div class="language">
+                <div class="select-language" id="targetLanguage">
+                    Gujarati
+                </div>
+            </div>
+            <div class="output">
+                {{transText}}
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function changeLanguage() {
+        let currentLanguage = document.getElementById('chooseLanguage');
+        let val = currentLanguage.value;
+        let target = document.getElementById("targetLanguage");
+        if (val == 'en') {
+            target.innerHTML = 'Gujarati';
+        }
+        else {
+            target.innerHTML = 'English';
+        }
+    }
+</script>
+
+</html>

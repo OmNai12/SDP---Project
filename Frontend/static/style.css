@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-title {
+    font-size: 30px;
+    color: azure;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(1, 25, 83);
+    padding: 10px;
+}
+
+.container {
+    padding: 25px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-space {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.transButton {
+    height: 35px;
+    width: 105px;
+    font-size: 20px;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 20px;
+    border-style: none;
+}
+
+.language {
+    margin-top: 5px;
+    color: azure;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(33, 31, 14);
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+.select-language {
+    font-size: 20px;
+}
+
+.ipBox {
+    margin-top: 20px;
+    width: 405px;
+    height: 275px;
+    font-size: 25px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+.output {
+    margin-top: 20px;
+    width: 405px;
+    height: 275px;
+    font-size: 25px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: auto;
+}
