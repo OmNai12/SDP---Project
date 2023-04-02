@@ -16,7 +16,7 @@ def hello():
 def transFunc():
     sent = request.form['textInput']
     transTextGet = translatorFunction(sent)
-    return render_template('index.html', transText=transTextGet)
+    return render_template('index.html', transText=transTextGet, otext=sent)
 
 
 @app.route("/ocrreader", methods=['POST'])
