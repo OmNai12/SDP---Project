@@ -1,3 +1,6 @@
 from new import ocr_Function
-import sys
-sys.path.insert(0, 'D:\\Final Project\\OCR_READER')
+
+
+def ocr_Reader_function():
+    outData = ocr_Function('img.png')
+    return outData
