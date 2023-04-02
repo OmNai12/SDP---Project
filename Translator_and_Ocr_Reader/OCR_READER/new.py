@@ -45,6 +45,6 @@ def ocr_Function(path: str):
 
 
 if __name__ == "__main__":
-    path = "data/t2.png"
+    path = "data/img_test.png"
     text = ocr_Function(path)
     print(text)

@@ -52,6 +52,15 @@
         <button class="voice-functionalities-buttons" id="text_to_voice_button">Click to listen</button>
     </div>
 
+    <center>
+        <div class="file-form">
+            <form action="/ocrreader" method="post" enctype="multipart/form-data">
+                <input type="file" class="file_upload" name="inputFile">
+                <input type="submit" class="fileSub" name="fileSub">
+            </form>
+        </div>
+    </center>
+
 
 </body>
 <script>
@@ -69,12 +78,47 @@
 
     function speak() {
         let speechReck = new webkitSpeechRecognition();
+        // speechReck.lang = "gu";
         speechReck.lang = "en-GB";
         speechReck.onresult = function (event) {
             document.getElementById("inputBoxForText").value = event.results[0][0].transcript;
         }
         speechReck.start();
     }
+
+    // // Different voice supports.
+    // let synth = speechSynthesis;
+
+    // function voices() {
+    //     for (let voice of synth.getVoices()) {
+    //         console.log(voice);
+    //     }
+    // }
+
+    // synth.addEventListener("voiceschanged", voices);
+
+    // // Text to speech function.
+    // function textToSpeech(text) {
+    //     let utterance = new SpeechSynthesisUtterance(text);
+    //     for (let voice of synth.getVoices()) {
+    //         if (voice.name === voiceList.value) {
+    //             utterance.voice = voice;
+    //         }
+    //     }
+    //     synth.speak(utterance);
+    // }
+
+    // let tts = document.querySelector(".output");
+    // speechBtn = document.querySelector("#text_to_voice_button");
+    // // Binding event listner.
+    // speechBtn.addEventListener("click", e => {
+    //     // Stop from submitting
+    //     e.preventDefault();
+    //     if (tts.innerHTML !== "") {
+
+    //     }
+    // });
+
 
 </script>
 
