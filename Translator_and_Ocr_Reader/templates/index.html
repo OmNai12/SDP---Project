@@ -50,7 +50,10 @@
     <div class="voice-functionalities">
         <button class="voice-functionalities-buttons" onclick="speak()" id="speech_to_text_button">Click to
             speak</button>
-        <button class="voice-functionalities-buttons" id="text_to_voice_button">Click to listen</button>
+        <form action="/soundplay" name="opform" method="post">
+            <input type="submit" value="Click to speak" name="playBtn" class="voice-functionalities-buttons"
+                id="text_to_voice_button">
+        </form>
     </div>
 
     <center>
@@ -86,41 +89,6 @@
         }
         speechReck.start();
     }
-
-    // // Different voice supports.
-    // let synth = speechSynthesis;
-
-    // function voices() {
-    //     for (let voice of synth.getVoices()) {
-    //         console.log(voice);
-    //     }
-    // }
-
-    // synth.addEventListener("voiceschanged", voices);
-
-    // // Text to speech function.
-    // function textToSpeech(text) {
-    //     let utterance = new SpeechSynthesisUtterance(text);
-    //     for (let voice of synth.getVoices()) {
-    //         if (voice.name === voiceList.value) {
-    //             utterance.voice = voice;
-    //         }
-    //     }
-    //     synth.speak(utterance);
-    // }
-
-    // let tts = document.querySelector(".output");
-    // speechBtn = document.querySelector("#text_to_voice_button");
-    // // Binding event listner.
-    // speechBtn.addEventListener("click", e => {
-    //     // Stop from submitting
-    //     e.preventDefault();
-    //     if (tts.innerHTML !== "") {
-
-    //     }
-    // });
-
-
 </script>
 
 </html>
